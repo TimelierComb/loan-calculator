@@ -1,0 +1,33 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}
+
+html {
+  height: 100%;
+  font-size: 14px;
+  font-family: $primary-font;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+
+  background-color: $white;
+  color: $black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

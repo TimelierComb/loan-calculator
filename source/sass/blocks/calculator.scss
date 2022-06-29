@@ -1,0 +1,33 @@
+.calculator {
+  @media (min-width: $desktop-width) {
+    max-width: 1180px;
+    margin: 58px auto 0;
+    padding: 85px 75px;
+
+    border-radius: 15px;
+    box-shadow: 0 10px 40px 0 $grey;
+  }
+}
+
+.calculator__title {
+  margin: 0 0 70px 0;
+  font-size: 36px;
+}
+
+.calculator__form {
+  display: grid;
+  grid-template-columns: 625px 300px;
+  column-gap: 50px;
+}
+
+.calculator__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__settings {
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+}

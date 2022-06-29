@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Калькулятор займа под ПТС</title>
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body class="body">
+    <h1 class="visually-hidden">Выдача займов онлайн</h1>
+    <section class="calculator">
+      <h2 class="calculator__title">Калькулятор займа под ПТС</h2>
+      <form class="calculator__form" method="post" action="">
+        <div class="calculator__wrapper">
+          <fieldset class="calculator__settings settings">
+            <legend class="visually-hidden">Настройки платежа</legend>
+            <div class="settings__wrapper">
+              <title class="settings__title">Тип платежа</title>
+              <div class="settings__container">
+                <input class="settings__input visually-hidden" type="radio" id="differentiated" name="payment-type" checked>
+                <label class="settings__label" for="differentiated">Дифференцированный</label>
+                <input class="settings__input visually-hidden" type="radio" id="annuity" name="payment-type">
+                <label class="settings__label" for="annuity">Аннуитетный</label>
+              </div>
+            </div>
+            <div class="settings__wrapper range">
+              <label class="range__title" for="amount">Сумма займа</label>
+              <input class="range__number" type="number" value="138100" id="amount">
+              <p class="range__description">Р</p>
+              <span class="range__addition-info">от 15 000 Р</span>
+              <input class="range__input" type="range" min="15000" max="1000000" step="100">
+              <span class="range__addition-info">до 1 000 000 Р</span>
+            </div>
+            <div class="settings__wrapper range">
+              <label class="range__title" for="amount">Срок займа</label>
+              <input class="range__number" type="number" value="8" id="amount">
+              <p class="range__description">месяцев</p>
+              <span class="range__addition-info">от 2 месяца</span>
+              <input class="range__input" type="range" min="2" max="12" step="1">
+              <span class="range__addition-info">до 12 месяцев</span>
+            </div>
+          </fieldset>
+          <p class="calculator__additional-text">
+            Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля
+          </p>
+        </div>
+        <div class="calculator__wrapper">
+          <fieldset class="calculator__rusults  information">
+            <legend class="visually-hidden">Рассчитанные результаты</legend>
+            <dl class="information__list">
+              <dt class="information__title">Ставка</dt>
+              <dd class="information__description">2.7%</dd>
+
+              <dt class="information__title">Ежемесячный платеж</dt>
+              <dd class="information__description">3 729 Р</dd>
+            </dl>
+          </fieldset>
+          <button class="calculator__button" type="submit">Подать заявку</button>
+          <p class="calculator__additional-text">
+            Расчет займа предварительный
+          </p>
+        </div>
+
+
+      </form>
+    </section>
+
+    <script src="./js/skript.js"></script>
+  </body>
+</html>

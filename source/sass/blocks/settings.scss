@@ -1,0 +1,69 @@
+.settings {
+  padding: 0;
+  margin: 0;
+}
+
+.settings__wrapper {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.settings__title {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.settings__container {
+  margin-top: 2px;
+  margin-left: auto;
+}
+
+.settings__label {
+  padding: 10px 20px 11px;
+
+  font-size: 16px;
+  border-radius: 6px 0 0 6px;
+  border: 3px solid $grey;
+
+  cursor: pointer;
+}
+
+.settings__label:first-of-type {
+  padding-right: 24px;
+  border-right: 3px solid $green;
+}
+
+.settings__label:nth-of-type(2) {
+  padding-left: 16px;
+  margin-left: -5px;
+  border-radius: 0 6px 6px 0;
+  border-left: 1px solid $green;
+}
+
+
+.settings__input:checked + .settings__label {
+  border-color: $green;
+}
+
+.settings__input:hover + .settings__label {
+  border-color: darken($grey, 5%);
+}
+
+.settings__input:checked:hover + .settings__label {
+  border-color: darken($green, 5%);
+}
+
+.settings__input:active:hover + .settings__label {
+  border-color: $black;
+}
+
+.settings__input:active + .settings__label {
+  border-color: $black;
+}
+
+.settings__input:focus + .settings__label {
+  border-color: $black;
+}

@@ -1,0 +1,116 @@
+.range {
+  flex-wrap: wrap;
+
+  position: relative;
+
+  min-height: 48px;
+}
+
+.range__title {
+  padding: 0;
+  margin: 2px 0 0 20px;
+
+  font-size: 22px;
+}
+
+.range__number {
+  width: 100px;
+  margin-left: 335px;
+  margin-top: -10px;
+
+  font-size: 22px;
+  border: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+  }
+}
+
+.range__description {
+  margin: 0;
+  padding: 0;
+}
+
+.range__addition-info {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+
+  font-size: 16px;
+
+  &:first-of-type {
+    left: 0;
+    right: auto;
+  }
+}
+
+
+.range__input {
+  width: 100%;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+
+  background-color: $grey-2;
+  background-image: linear-gradient($green, $green);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+
+  appearance: none;
+}
+
+.range__input::-webkit-slider-thumb {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: $green;
+  border: 1px solid $green;
+  filter: drop-shadow(0 1px 3px fade-out($black, 0.84));
+
+  appearance: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($green, 5%);
+    filter: drop-shadow(0 2px 4px fade-out($black, 0.81));
+  }
+
+  &:active {
+    background-color: darken($green, 5%);
+    filter: drop-shadow(0 3px 5px fade-out($black, 0.8));
+    border-color: $black;
+  }
+}
+
+.range__input::-moz-range-thumb {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: $green;
+  border: 1px solid $green;
+  filter: drop-shadow(0 1px 3px fade-out($black, 0.84));
+
+  appearance: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($green, 5%);
+    filter: drop-shadow(0 2px 4px fade-out($black, 0.81));
+  }
+
+  &:active {
+    background-color: darken($green, 5%);
+    filter: drop-shadow(0 3px 5px fade-out($black, 0.8));
+    border-color: $black;
+  }
+}
