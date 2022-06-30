@@ -1,5 +1,5 @@
-const rangeInputs = document.querySelectorAll('.range__input');
-const numberInputs = document.querySelectorAll('.range__number');
+const rangeInputElements = document.querySelectorAll('.range__input');
+const numberInputElements = document.querySelectorAll('.range__number');
 
 function handleInputChange(evt) {
   let target = evt.target;
@@ -16,11 +16,11 @@ function handleInputChange(evt) {
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
 }
 
-rangeInputs.forEach(input => {
+rangeInputElements.forEach(input => {
   input.addEventListener('input', handleInputChange);
 });
 
-numberInputs.forEach(number => {
+numberInputElements.forEach(number => {
   number.addEventListener('input', handleInputChange);
 });
 

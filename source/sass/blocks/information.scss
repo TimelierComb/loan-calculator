@@ -1,0 +1,23 @@
+.information {
+  padding: 0;
+  margin: -10px 0 0;
+
+  border: none;
+}
+
+.information__list {
+  margin: 0;
+}
+
+.information__title {
+  margin-bottom: 12px;
+
+  color: $grey-text;
+}
+
+.information__description {
+  margin: 0 0 32px;
+
+  font-size: 50px;
+  line-height: 50px;
+}
