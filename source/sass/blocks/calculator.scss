@@ -2,7 +2,7 @@
   @media (min-width: $desktop-width) {
     max-width: 1180px;
     margin: 58px auto 0;
-    padding: 85px 75px;
+    padding: 85px 75px 75px;
 
     border-radius: 15px;
     box-shadow: 0 10px 40px 0 $grey;
@@ -30,4 +30,12 @@
   flex-direction: column;
 
   border: none;
+}
+
+.calculator__additional-text {
+  margin: -8px 0 0;
+  padding: 0;
+
+  color: $grey-text;
+  font-size: 12px;
 }

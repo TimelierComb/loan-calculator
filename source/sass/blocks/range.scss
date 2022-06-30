@@ -4,6 +4,7 @@
   position: relative;
 
   min-height: 48px;
+  margin-bottom: 60px;
 }
 
 .range__title {
@@ -15,6 +16,7 @@
 
 .range__number {
   width: 100px;
+  // max-height: 32px;
   margin-left: 335px;
   margin-top: -10px;
 
@@ -29,9 +31,34 @@
   }
 }
 
+.range__number:hover {
+  color: $green;
+}
+
+.range__number:focus {
+  outline: none;
+  color: darken($green, 15%);
+}
+
 .range__description {
+  display: inline-block;
+  vertical-align: middle;
+
+  max-height: 32px;
   margin: 0;
   padding: 0;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.range__number:hover + .range__description {
+  color: $green;
+}
+
+.range__number:focus + .range__description {
+  outline: none;
+  color: darken($green, 15%);
 }
 
 .range__addition-info {
@@ -39,7 +66,8 @@
   bottom: -20px;
   right: 0;
 
-  font-size: 16px;
+  font-size: 14px;
+  color: $grey-text;
 
   &:first-of-type {
     left: 0;
@@ -55,7 +83,7 @@
   padding: 0;
   align-self: center;
 
-  background-color: $grey-2;
+  background-color: $grey-input;
   background-image: linear-gradient($green, $green);
   background-size: 13% 100%;
   background-repeat: no-repeat;
@@ -65,6 +93,11 @@
 
 .range:last-of-type .range__input {
   background-size: 60% 100%;
+}
+
+.range:last-of-type .range__number {
+  padding: 0 10px;
+  width: 50px;
 }
 
 .range__input::-webkit-slider-thumb {
@@ -101,7 +134,7 @@
 
   border-radius: 50%;
   background-color: $green;
-  border: 1px solid $green;
+  border: 3px solid $green;
   filter: drop-shadow(0 1px 3px fade-out($black, 0.84));
 
   appearance: none;
@@ -117,4 +150,14 @@
     filter: drop-shadow(0 3px 5px fade-out($black, 0.8));
     border-color: $black;
   }
+}
+
+.range__input:focus {
+  outline: none;
+  background-image: linear-gradient(darken($green, 10%), darken($green, 10%));
+}
+
+.range__input:focus::-webkit-slider-thumb {
+  background-color: darken($green, 10%);
+  border-color: $black;
 }
