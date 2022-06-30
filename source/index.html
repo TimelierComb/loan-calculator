@@ -10,12 +10,12 @@
     <h1 class="visually-hidden">Выдача займов онлайн</h1>
     <section class="calculator">
       <h2 class="calculator__title">Калькулятор займа под ПТС</h2>
-      <form class="calculator__form" method="post" action="">
+      <form class="calculator__form" method="post">
         <div class="calculator__wrapper">
           <fieldset class="calculator__settings settings">
             <legend class="visually-hidden">Настройки платежа</legend>
             <div class="settings__wrapper">
-              <title class="settings__title">Тип платежа</title>
+              <div class="settings__title">Тип платежа</div>
               <div class="settings__container">
                 <input class="settings__input visually-hidden" type="radio" id="differentiated" name="payment-type" checked>
                 <label class="settings__label" for="differentiated">Дифференцированный</label>
@@ -24,16 +24,16 @@
               </div>
             </div>
             <div class="settings__wrapper range">
-              <label class="range__title" for="amount">Сумма займа</label>
-              <input class="range__number" type="number" value="138100" id="amount">
+              <label class="range__title" for="loan-amount">Сумма займа</label>
+              <input class="range__number" type="number" value="138100" id="loan-amount">
               <p class="range__description">Р</p>
               <span class="range__addition-info">от 15 000 Р</span>
               <input class="range__input" type="range" min="15000" max="1000000" step="100">
               <span class="range__addition-info">до 1 000 000 Р</span>
             </div>
             <div class="settings__wrapper range">
-              <label class="range__title" for="amount">Срок займа</label>
-              <input class="range__number" type="number" value="8" id="amount">
+              <label class="range__title" for="loan-length">Срок займа</label>
+              <input class="range__number" type="number" value="8" id="loan-length">
               <p class="range__description">месяцев</p>
               <span class="range__addition-info">от 2 месяца</span>
               <input class="range__input" type="range" min="2" max="12" step="1">
@@ -60,8 +60,6 @@
             Расчет займа предварительный
           </p>
         </div>
-
-
       </form>
     </section>
 
