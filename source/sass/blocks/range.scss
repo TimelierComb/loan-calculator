@@ -4,23 +4,41 @@
   position: relative;
 
   min-height: 48px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
 }
 
 .range__title {
   padding: 0;
-  margin: 2px 0 0 20px;
+  margin: 2px 0 0;
 
-  font-size: 22px;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin: 2px 0 0 20px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 
 .range__number {
-  width: 100px;
-  // max-height: 32px;
-  margin-left: 335px;
-  margin-top: -10px;
+  width: 60px;
+  margin-left: auto;
+  max-height: 20px;
 
-  font-size: 22px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 
@@ -29,6 +47,23 @@
     -webkit-appearance: none;
           appearance: none;
     margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    max-height: 32px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    margin-left: 333px;
+    margin-top: -5px;
+
+    font-size: 22px;
+    line-height: 22px;
   }
 }
 
@@ -45,12 +80,22 @@
   display: inline-block;
   vertical-align: middle;
 
-  max-height: 32px;
+  max-height: 16px;
   margin: 0;
   padding: 0;
 
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-height: 32px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .range__number:hover + .range__description {
@@ -67,15 +112,24 @@
   bottom: -20px;
   right: 0;
 
-  font-size: 14px;
+  font-size: 12px;
   color: $grey-text;
 
   &:first-of-type {
     left: 0;
     right: auto;
   }
-}
 
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
 
 .range__input {
   width: 100%;
@@ -98,7 +152,7 @@
 
 .range:last-of-type .range__number {
   padding: 0 10px;
-  width: 50px;
+  width: 45px;
 }
 
 .range__input::-webkit-slider-thumb {

@@ -48,11 +48,20 @@
           <fieldset class="calculator__rusults  information">
             <legend class="visually-hidden">Рассчитанные результаты</legend>
             <dl class="information__list">
-              <dt class="information__title">Ставка</dt>
-              <dd class="information__description">2.7%</dd>
-
-              <dt class="information__title">Ежемесячный платеж</dt>
-              <dd class="information__description">3 729 Р</dd>
+              <div class="information__wrapper">
+                <dt class="information__title">Ставка</dt>
+                <dd class="information__description">
+                  <span class="information__percent" id="persent">2.7</span>
+                  %
+                </dd>
+              </div>
+              <div class="information__wrapper">
+                <dt class="information__title">Ежемесячный платеж</dt>
+                <dd class="information__description" id="month-payment">
+                  <span class="information__payment" id="total-payment">3 729</span>
+                  Р
+                </dd>
+              </div>
             </dl>
           </fieldset>
           <button class="calculator__button" type="submit">Подать заявку</button>
@@ -62,6 +71,12 @@
         </div>
       </form>
     </section>
+    <div class="modal">
+      <div class="modal__popup">
+        <div class="modal__description">Заявка успешно отправлена!</div>
+        <button class="modal__button">Закрыть</button>
+      </div>
+    </div>
 
     <script src="./js/skript.js" type="module"></script>
   </body>
