@@ -4,80 +4,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Калькулятор займа под ПТС</title>
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
+    <script src="./js/swup.min.js" defer></script>
+    <script src="./js/links.js" defer></script>
   </head>
   <body class="body">
-    <h1 class="visually-hidden">Выдача займов онлайн</h1>
-    <section class="calculator">
-      <h2 class="calculator__title">Калькулятор займа под ПТС</h2>
-      <form class="calculator__form" method="post">
-        <div class="calculator__wrapper">
-          <fieldset class="calculator__settings settings">
-            <legend class="visually-hidden">Настройки платежа</legend>
-            <div class="settings__wrapper">
-              <div class="settings__title">Тип платежа</div>
-              <div class="settings__container">
-                <input class="settings__input visually-hidden" type="radio" id="differentiated" name="payment-type" checked>
-                <label class="settings__label" for="differentiated">Дифференцированный</label>
-                <input class="settings__input visually-hidden" type="radio" id="annuity" name="payment-type">
-                <label class="settings__label" for="annuity">Аннуитетный</label>
+    <main >
+      <h1 class="visually-hidden">Выдача займов онлайн</h1>
+      <section class="calculator">
+        <h2 class="calculator__title">Калькулятор займа под ПТС</h2>
+        <form class="calculator__form" method="post">
+          <div class="calculator__wrapper">
+            <fieldset class="calculator__settings settings">
+              <legend class="visually-hidden">Настройки платежа</legend>
+              <div class="settings__wrapper">
+                <div class="settings__title">Тип платежа</div>
+                <div class="settings__container">
+                  <input class="settings__input visually-hidden" type="radio" id="differentiated" name="payment-type" checked>
+                  <label class="settings__label" for="differentiated">Дифференцированный</label>
+                  <input class="settings__input visually-hidden" type="radio" id="annuity" name="payment-type">
+                  <label class="settings__label" for="annuity">Аннуитетный</label>
+                </div>
               </div>
-            </div>
-            <div class="settings__wrapper range">
-              <label class="range__title" for="amountnumber">Сумма займа</label>
-              <input class="range__number" type="number" min="15000" max="1000000" value="138100" step="100" id="amountnumber" oninput="amountrange.value=value">
-              <p class="range__description">Р</p>
-              <span class="range__addition-info">от 15 000 Р</span>
-              <input class="range__input" type="range" min="15000" max="1000000" value="138100" step="100" id="amountrange" oninput="amountnumber.value=value">
-              <span class="range__addition-info">до 1 000 000 Р</span>
-            </div>
-            <div class="settings__wrapper range">
-              <label class="range__title" for="monthnumber">Срок займа</label>
-              <input class="range__number" type="number" value="8" id="monthnumber" oninput="monthrange.value=value">
-              <p class="range__description">месяцев</p>
-              <span class="range__addition-info">от 2 месяца</span>
-              <input class="range__input" type="range" min="2" max="12" value="8" step="1" id="monthrange" oninput="monthnumber.value=value">
-              <span class="range__addition-info">до 12 месяцев</span>
-            </div>
-          </fieldset>
-          <p class="calculator__additional-text">
-            Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля
-          </p>
+              <div class="settings__wrapper range">
+                <label class="range__title" for="amountnumber">Сумма займа</label>
+                <input class="range__number" type="number" min="15000" max="1000000" value="138100" step="100" id="amountnumber" oninput="amountrange.value=value">
+                <p class="range__description">Р</p>
+                <span class="range__addition-info">от 15 000 Р</span>
+                <input class="range__input" type="range" min="15000" max="1000000" value="138100" step="100" id="amountrange" oninput="amountnumber.value=value">
+                <span class="range__addition-info">до 1 000 000 Р</span>
+              </div>
+              <div class="settings__wrapper range">
+                <label class="range__title" for="monthnumber">Срок займа</label>
+                <input class="range__number" type="number" value="8" id="monthnumber" oninput="monthrange.value=value">
+                <p class="range__description">месяцев</p>
+                <span class="range__addition-info">от 2 месяца</span>
+                <input class="range__input" type="range" min="2" max="12" value="8" step="1" id="monthrange" oninput="monthnumber.value=value">
+                <span class="range__addition-info">до 12 месяцев</span>
+              </div>
+            </fieldset>
+            <p class="calculator__additional-text">
+              Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля
+            </p>
+          </div>
+          <div class="calculator__wrapper">
+            <fieldset class="calculator__rusults  information">
+              <legend class="visually-hidden">Рассчитанные результаты</legend>
+              <dl class="information__list">
+                <div class="information__wrapper">
+                  <dt class="information__title">Ставка</dt>
+                  <dd class="information__description">
+                    <span class="information__percent" id="persent">2.7</span>
+                    %
+                  </dd>
+                </div>
+                <div class="information__wrapper">
+                  <dt class="information__title">Ежемесячный платеж</dt>
+                  <dd class="information__description" id="month-payment">
+                    <span class="information__payment" id="total-payment">3 729</span>
+                    Р
+                  </dd>
+                </div>
+              </dl>
+            </fieldset>
+            <button class="calculator__button" type="submit">Подать заявку</button>
+            <p class="calculator__additional-text">
+              Расчет займа предварительный
+            </p>
+          </div>
+        </form>
+        <div class="transition-fade" id="swup">
+          <a class="calculator__config-link" href="/config/config.html"></a>
         </div>
-        <div class="calculator__wrapper">
-          <fieldset class="calculator__rusults  information">
-            <legend class="visually-hidden">Рассчитанные результаты</legend>
-            <dl class="information__list">
-              <div class="information__wrapper">
-                <dt class="information__title">Ставка</dt>
-                <dd class="information__description">
-                  <span class="information__percent" id="persent">2.7</span>
-                  %
-                </dd>
-              </div>
-              <div class="information__wrapper">
-                <dt class="information__title">Ежемесячный платеж</dt>
-                <dd class="information__description" id="month-payment">
-                  <span class="information__payment" id="total-payment">3 729</span>
-                  Р
-                </dd>
-              </div>
-            </dl>
-          </fieldset>
-          <button class="calculator__button" type="submit">Подать заявку</button>
-          <p class="calculator__additional-text">
-            Расчет займа предварительный
-          </p>
+      </section>
+      <div class="modal">
+        <div class="modal__popup">
+          <div class="modal__description">Заявка успешно отправлена!</div>
+          <button class="modal__button">Закрыть</button>
         </div>
-      </form>
-    </section>
-    <div class="modal">
-      <div class="modal__popup">
-        <div class="modal__description">Заявка успешно отправлена!</div>
-        <button class="modal__button">Закрыть</button>
       </div>
-    </div>
+    </main>
 
     <script src="./js/skript.js" type="module"></script>
+
   </body>
 </html>

@@ -36,6 +36,12 @@ const html = () => {
   .pipe(gulp.dest('build'));
 }
 
+const config = () => {
+  return gulp.src('source/config/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build/config'));
+}
+
 
 // Scripts
 
@@ -160,6 +166,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
+    config,
     scripts,
     svg,
     sprite,
