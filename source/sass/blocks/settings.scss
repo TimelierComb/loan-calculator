@@ -63,7 +63,3 @@
 .settings__input:active + .settings__label {
   border-color: $black;
 }
-
-.settings__input:focus + .settings__label {
-  border-color: $black;
-}

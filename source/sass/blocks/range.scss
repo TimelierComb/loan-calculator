@@ -57,10 +57,14 @@
 
   background-color: $grey-2;
   background-image: linear-gradient($green, $green);
-  background-size: 50% 100%;
+  background-size: 13% 100%;
   background-repeat: no-repeat;
 
   appearance: none;
+}
+
+.range:last-of-type .range__input {
+  background-size: 60% 100%;
 }
 
 .range__input::-webkit-slider-thumb {
