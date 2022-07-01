@@ -1,12 +1,14 @@
 {
-  "name": "its-pro-digital",
+  "name": "Калькулятор займа под ПТС",
   "private": true,
-  "description": "Пробный проект Its Pro Digital",
+  "homepage": "https://timeliercomb.github.io/loan-calculator/",
+  "description": "Калькулятор займа под ПТС",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
     "browser-sync": "2.27.7",
     "del": "^6.1.0",
+    "gh-pages": "^4.0.0",
     "gulp": "4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-libsquoosh": "^1.1.2",
@@ -26,7 +28,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
