@@ -1,6 +1,7 @@
 # Тестовое задание "Калькулятор займа под ПТС"
 
-Автор: Владимир Левшин
+Автор: Владимир Левшин  
+
 Ссылка на Github Pages: [https://timeliercomb.github.io/loan-calculator/];
 
 1. Создан блок в соответствии с предоставленным заданием: [https://gray-herring-0c2.notion.site/VueJS-3e3754c9001b4eb29457f12a0f8232a6];
