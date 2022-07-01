@@ -9,8 +9,6 @@ formElement.addEventListener('submit', (evt) => {
   openPopup();
 })
 
-
-
 function onEscapeKeydown (evt) {
   if (evt.key === 'Escape') {
     closePopup ();

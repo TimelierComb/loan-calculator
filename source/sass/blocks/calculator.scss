@@ -126,11 +126,11 @@
 
 .calculator__config-link {
   position: absolute;
-  right: 75px;
-  top: 75px;
+  right: 25px;
+  top: 25px;
 
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 
   background-image: url("../img/gear.png");
   background-size: 100% auto;
@@ -138,7 +138,6 @@
   background-position: center;
 
   cursor: pointer;
-  z-index: 10;
   transition: 1s;
 
   &:hover {
@@ -149,5 +148,18 @@
   &:active {
     transform: rotate(360deg);
     transition: 1s;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 25px;
+    top: 40px;
+
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 75px;
+    top: 75px;
   }
 }
